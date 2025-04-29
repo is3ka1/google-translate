@@ -4,7 +4,7 @@ package google_translate
 import (
 	"fmt"
 
-	"github.com/gilang-as/google-translate/params"
+	"github.com/is3ka1/google-translate/params"
 	"golang.org/x/text/language"
 )
 

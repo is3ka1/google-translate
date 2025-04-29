@@ -3,8 +3,8 @@ package google_translate
 import (
 	"testing"
 
-	"github.com/gilang-as/google-translate/params"
-	"github.com/gilang-as/google-translate/params/language"
+	"github.com/is3ka1/google-translate/params"
+	"github.com/is3ka1/google-translate/params/language"
 )
 
 func TestTranslateWithParam(t *testing.T) {
