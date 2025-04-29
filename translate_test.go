@@ -1,15 +1,17 @@
 package google_translate
 
 import (
-	"github.com/gilang-as/google-translate/params"
 	"testing"
+
+	"github.com/gilang-as/google-translate/params"
+	"github.com/gilang-as/google-translate/params/language"
 )
 
 func TestTranslateWithParam(t *testing.T) {
 	value := params.Translate{
 		Text: "Halo Dunia",
 		//From: "id",
-		To: params.ENGLISH,
+		To: language.ENGLISH,
 	}
 	translated, err := TranslateWithParam(value)
 	if err != nil {
@@ -21,7 +23,7 @@ func TestTranslateWithParam(t *testing.T) {
 }
 
 func TestTranslate(t *testing.T) {
-	translated, err := Translate("Hello World", params.INDONESIAN)
+	translated, err := Translate("Hello World", language.INDONESIAN)
 	if err != nil {
 		t.Error(err)
 	}
@@ -31,7 +33,7 @@ func TestTranslate(t *testing.T) {
 }
 
 func TestManualTranslate(t *testing.T) {
-	translated, err := ManualTranslate("Halo Semuanya", params.INDONESIAN, params.JAVANESE)
+	translated, err := ManualTranslate("Halo Semuanya", language.INDONESIAN, language.JAVANESE)
 	if err != nil {
 		t.Error(err)
 	}

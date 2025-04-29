@@ -1,7 +1,9 @@
+//go:generate go run params/gen/main.go
 package google_translate
 
 import (
 	"fmt"
+
 	"github.com/gilang-as/google-translate/params"
 	"golang.org/x/text/language"
 )
