@@ -98,9 +98,13 @@ type Translated struct {
 
 func translateV1(text string, from string, to string) (*Translated, error) {
 	var (
-		rpcId   = "MkEWBc"
-		err     error
-		client  = &http.Client{}
+		rpcId  = "MkEWBc"
+		err    error
+		client = &http.Client{
+			Transport: &http.Transport{
+				Proxy: http.ProxyFromEnvironment,
+			},
+		}
 		param   = url.Values{}
 		body    = url.Values{}
 		baseUrl = "https://translate." + HOST
